@@ -159,7 +159,7 @@ switch (userInput2) {
  }
 
 console.log("Bonus-Opdracht 5a t/m c");
-// comment opdracht 2 t/m 4 uit
+// comment opdracht 1 t/m 4 uit
 
 // const jobTitleElement = document.getElementById('role-title');
 // const departmentDescriptionElement = document.getElementById('department-description');
