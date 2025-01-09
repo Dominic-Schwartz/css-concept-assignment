@@ -71,35 +71,35 @@ const departments = {
     }
 }
 
-console.log(departments);
-
-console.log("Opdracht 1a t/m d");
-
-console.log("De afdeling Sales heeft " + departments.sales.numberOfEmployees + " medewerkers" )
-console.log("Marketing is een leuke afdeling om te werken. " + departments.marketing.description)
-console.log("De afdeling Customer Service heeft " + departments["customer-service"].numberOfEmployees + " medewerkers")
-console.log("Sales is een uitdagende afdeling om te werken als verkoopmanager. " + departments.sales.jobs[1].description)
-
-console.log("Opdracht 2a t/m c");
-
-const userInput = prompt('Over welke afdeling wil je meer informatie? Kies uit: [Marketing / Sales / Customer Service]');
-let lowerCaseInput = userInput.toLowerCase();
-// alert(lowerCaseInput);
-console.log(userInput);
-
-switch (lowerCaseInput) {
-    case "marketing":
-        console.log("Je koos " + lowerCaseInput + ". " + departments.marketing.description);
-        break;
-    case "sales":
-        console.log("Je koos " + lowerCaseInput + ". " + departments.sales.description);
-        break;
-    case "customer-service":
-        console.log("Je koos " + lowerCaseInput + ". " +  departments["customer-service"].description);
-        break
-    default:
-        console.error('Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.');
-}
+// console.log(departments);
+//
+// console.log("Opdracht 1a t/m d");
+//
+// console.log("De afdeling Sales heeft " + departments.sales.numberOfEmployees + " medewerkers" )
+// console.log("Marketing is een leuke afdeling om te werken. " + departments.marketing.description)
+// console.log("De afdeling Customer Service heeft " + departments["customer-service"].numberOfEmployees + " medewerkers")
+// console.log("Sales is een uitdagende afdeling om te werken als verkoopmanager. " + departments.sales.jobs[1].description)
+//
+// console.log("Opdracht 2a t/m c");
+//
+// const userInput = prompt('Over welke afdeling wil je meer informatie? Kies uit: [Marketing / Sales / Customer Service]');
+// let lowerCaseInput = userInput.toLowerCase();
+// // alert(lowerCaseInput);
+// console.log(userInput);
+//
+// switch (lowerCaseInput) {
+//     case "marketing":
+//         console.log("Je koos " + lowerCaseInput + ". " + departments.marketing.description);
+//         break;
+//     case "sales":
+//         console.log("Je koos " + lowerCaseInput + ". " + departments.sales.description);
+//         break;
+//     case "customer-service":
+//         console.log("Je koos " + lowerCaseInput + ". " +  departments["customer-service"].description);
+//         break
+//     default:
+//         console.error('Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.');
+// }
 
 // // console.log("Opdracht 3a t/m c");
 // //
@@ -129,68 +129,69 @@ switch (lowerCaseInput) {
 // //  }
 //
 
-console.log("Opdracht 4a t/m c");
+// console.log("Opdracht 4a t/m c");
+//
+// console.log(lowerCaseInput + ' is een leuke afdeling om te werken. Er werken op dit moment ' + departments[lowerCaseInput].numberOfEmployees + ' medewerkers.');
+//
+// const userInput2 = prompt('Je koos' + lowerCaseInput + '. '
+//     + 'Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in. 0: '
+//     + departments[lowerCaseInput].jobs[0].title + ', 1: '
+//     + departments[lowerCaseInput].jobs[1].title + ', 2: '
+//     + departments[lowerCaseInput].jobs[2].title + ', 3: '
+//     + departments[lowerCaseInput].jobs[3].title
+// );
+//
+// switch (userInput2) {
+//     case '0':
+//         console.log('Je koos ' + departments[lowerCaseInput].jobs[0].title + '. Een uitdagende rol! ' + departments.marketing.jobs[0].description);
+//         break;
+//     case '1':
+//         console.log('Je koos ' + departments[lowerCaseInput].jobs[1].title + '. Een uitdagende rol! ' + departments.marketing.jobs[1].description);
+//         break;
+//     case '2':
+//         console.log('Je koos ' + departments[lowerCaseInput].jobs[2].title + '. Een uitdagende rol! ' + departments.marketing.jobs[2].description);
+//         break;
+//     case '3':
+//         console.log('Je koos ' + departments[lowerCaseInput].jobs[3].title + '. Een uitdagende rol! ' + departments.marketing.jobs[3].description);
+//         break;
+//     default:
+//         console.error('Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.');
+//  }
 
-console.log(lowerCaseInput + ' is een leuke afdeling om te werken. Er werken op dit moment ' + departments[lowerCaseInput].numberOfEmployees + ' medewerkers.');
+// console.log("Bonus-Opdracht 5a t/m c");
+// comment opdracht 1 t/m 4 uit
 
-const userInput2 = prompt('Je koos' + lowerCaseInput + '. '
-    + 'Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in. 0: '
-    + departments[lowerCaseInput].jobs[0].title + ', 1: '
-    + departments[lowerCaseInput].jobs[1].title + ', 2: '
-    + departments[lowerCaseInput].jobs[2].title + ', 3: '
-    + departments[lowerCaseInput].jobs[3].title
-);
+const jobTitleElement = document.getElementById('role-title');
+const departmentDescriptionElement = document.getElementById('department-description');
+const roleDescriptionElement = document.getElementById('role-description');
+const errorMessageElement = document.getElementById('error-message');
 
-switch (userInput2) {
-    case '0':
-        console.log('Je koos ' + departments[lowerCaseInput].jobs[0].title + '. Een uitdagende rol! ' + departments.marketing.jobs[0].description);
-        break;
-    case '1':
-        console.log('Je koos ' + departments[lowerCaseInput].jobs[1].title + '. Een uitdagende rol! ' + departments.marketing.jobs[1].description);
-        break;
-    case '2':
-        console.log('Je koos ' + departments[lowerCaseInput].jobs[2].title + '. Een uitdagende rol! ' + departments.marketing.jobs[2].description);
-        break;
-    case '3':
-        console.log('Je koos ' + departments[lowerCaseInput].jobs[3].title + '. Een uitdagende rol! ' + departments.marketing.jobs[3].description);
-        break;
-    default:
-        console.error('Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.');
- }
+// Vraag de gebruiker om invoer
+const userInput = prompt('Over welke afdeling wil je meer informatie? Kies uit: [marketing / sales / customer-service]').toLowerCase();
 
-console.log("Bonus-Opdracht 5a t/m c");
-// comment opdracht 2 t/m 4 uit
+// Controleer of de invoer overeenkomt met een bestaande afdeling
+if (departments[userInput]) {
+    // Zet de afdeling beschrijving in de HTML
+    departmentDescriptionElement.textContent = `${userInput} is een leuke afdeling om te werken. Er werken op dit moment ${departments[userInput].numberOfEmployees} medewerkers. ${departments[userInput].description}`;
 
-// const jobTitleElement = document.getElementById('role-title');
-// const departmentDescriptionElement = document.getElementById('department-description');
-// const roleDescriptionElement = document.getElementById('role-description');
-// const errorMessageElement = document.getElementById('error-message');
-//
-// // Vraag de gebruiker om invoer
-// const userInput = prompt('Over welke afdeling wil je meer informatie? Kies uit: [marketing / sales / customer-service]').toLowerCase();
-//
-// if (departments[userInput]) {
-//     // Zet de afdeling beschrijving in de HTML
-//     departmentDescriptionElement.textContent = `${userInput} is een leuke afdeling om te werken. Er werken op dit moment ${departments[userInput].numberOfEmployees} medewerkers. ${departments[userInput].description}`;
-//
-//     // Vraag de gebruiker over welke functie ze meer willen weten
-//     const jobs = departments[userInput].jobs;
-//     const jobTitles = jobs.map((job, index) => `${index}: ${job.title}`).join('\n');
-//
-//     const jobInput = prompt(`Je koos ${userInput}. Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in.\n${jobTitles}`);
-//     const jobIndex = parseInt(jobInput, 10);
-//
-//     if (jobIndex >= 0 && jobIndex < jobs.length) {
-//         const chosenJob = jobs[jobIndex];
-//
-//         // Zet de gekozen job titel en beschrijving in de HTML
-//         jobTitleElement.textContent = chosenJob.title;
-//         roleDescriptionElement.textContent = `Je koos ${chosenJob.title}. Een uitdagende rol! ${chosenJob.description}`;
-//     } else {
-//         // Toon foutmelding
-//         errorMessageElement.textContent = "Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.";
-//     }
-// } else {
-//     // Toon foutmelding
-//     errorMessageElement.textContent = "Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.";
-// }
+    // Vraag de gebruiker over welke functie ze meer willen weten
+    const jobs = departments[userInput].jobs;
+    const jobTitles = jobs.map((job, index) => `${index}: ${job.title}`).join('\n');
+
+    const jobInput = prompt(`Je koos ${userInput}. Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in.\n${jobTitles}`);
+    const jobIndex = parseInt(jobInput, 10);
+
+    if (jobIndex >= 0 && jobIndex < jobs.length) {
+        const chosenJob = jobs[jobIndex];
+
+        // Zet de gekozen job titel en beschrijving in de HTML
+        jobTitleElement.textContent = chosenJob.title;
+        roleDescriptionElement.textContent = `Je koos ${chosenJob.title}. Een uitdagende rol! ${chosenJob.description}`;
+    } else {
+        // Toon foutmelding
+        errorMessageElement.textContent = "Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.";
+    }
+} else {
+    // Toon foutmelding
+    errorMessageElement.textContent = "Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.";
+}
